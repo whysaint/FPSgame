@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class FireBall : MonoBehaviour
 {
     public float speed = 10f;
@@ -13,10 +14,11 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerCharacter player = GetComponent<PlayerCharacter>();
+        PlayerCharacter player = other.GetComponent<PlayerCharacter>();
         if (player != null)
         {
             Debug.Log("Player hit");
+            player.Hurt(damage);
         }
         Destroy(gameObject);
     }

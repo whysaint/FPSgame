@@ -48,12 +48,20 @@
   <ItemGroup>
     <Compile Include="Assets/scripts/RayShooter.cs" />
     <Compile Include="Assets/scripts/FPSInput.cs" />
+    <Compile Include="Assets/Material/SkyboxPlus/Demo/Scripts/SkyboxSwitch.cs" />
     <Compile Include="Assets/scripts/ReactiveTarget.cs" />
     <Compile Include="Assets/scripts/FireBall.cs" />
     <Compile Include="Assets/scripts/PlayerCharacter.cs" />
+    <Compile Include="Assets/Material/SkyboxPlus/Demo/Scripts/Rotate.cs" />
     <Compile Include="Assets/scripts/SceneController.cs" />
     <Compile Include="Assets/scripts/WanderingAI.cs" />
+    <Compile Include="Assets/Material/SkyboxPlus/Demo/Scripts/FreeCameraMove.cs" />
     <Compile Include="Assets/scripts/MouseLook.cs" />
+    <Compile Include="Assets/Material/SkyboxPlus/Scripts/SkyboxPlus.cs" />
+    <None Include="Assets/Material/SkyboxPlus/README.txt" />
+    <None Include="Assets/Material/SkyboxPlus/Resources/SkyboxPlus/Shaders/SkyboxPlusLandscape.shader" />
+    <None Include="Assets/Material/SkyboxPlus/Demo/Environment/Terrain/Grass/Grass.shader" />
+    <None Include="Assets/Material/SkyboxPlus/Resources/SkyboxPlus/Shaders/SkyboxPlusClouds.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/6000.0.51f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

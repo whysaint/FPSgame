@@ -43,7 +43,6 @@ public class RayShooter : MonoBehaviour
                     StartCoroutine(SphereIndicator(hit.point));
                 }
                 
-                Debug.Log(point);
                 Debug.DrawLine(ray.origin, hit.point, Color.red, 999f);
             }
         }

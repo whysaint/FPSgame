@@ -1,16 +1,18 @@
+using System;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private int Health;
+
+    private void Start()
     {
-        
+        Health = 5;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Hurt(int damage)
     {
-        
+        Health -= damage;
+        Debug.Log($"- 1hp, lost {Health}hp lol");
     }
 }
