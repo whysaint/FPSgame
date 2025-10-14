@@ -858,6 +858,9 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>/Users/taraspanchuk/Unity projects/fpsgame_learnbook/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>/Users/taraspanchuk/Unity projects/fpsgame_learnbook/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>/Users/taraspanchuk/Unity projects/fpsgame_learnbook/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
