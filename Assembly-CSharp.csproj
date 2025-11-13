@@ -53,6 +53,7 @@
     <Compile Include="Assets/scripts/PlayerCharacter.cs" />
     <Compile Include="Assets/scripts/SceneController.cs" />
     <Compile Include="Assets/scripts/WanderingAI.cs" />
+    <Compile Include="Assets/scripts/BasicUI.cs" />
     <Compile Include="Assets/scripts/MouseLook.cs" />
     <Compile Include="Assets/scripts/BackAndForth.cs" />
     <Reference Include="UnityEngine">
