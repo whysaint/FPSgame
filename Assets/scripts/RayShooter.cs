@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Data;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.HID;
 
 public class RayShooter : MonoBehaviour
@@ -11,7 +12,6 @@ public class RayShooter : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnGUI()
@@ -23,9 +23,10 @@ public class RayShooter : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector3 point = new Vector3(cam.pixelWidth / 2, cam.pixelHeight / 2);
+
             Ray ray = cam.ScreenPointToRay(point);
 
             RaycastHit hit;
