@@ -13,6 +13,6 @@ public class PlayerCharacter : MonoBehaviour
     public void Hurt(int damage)
     {
         Health -= damage;
-        Debug.Log($"- 1hp, lost {Health}hp lol");
+        Debug.Log($"- 1hp, lost {Health}hp");
     }
 }

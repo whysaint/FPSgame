@@ -539,6 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  baseSpeed: 6
   gravity: -9.8
   CharacterController: {fileID: 0}
 --- !u!114 &357273176
@@ -565,7 +566,6 @@ GameObject:
   - component: {fileID: 392648594}
   - component: {fileID: 392648593}
   - component: {fileID: 392648592}
-  - component: {fileID: 392648595}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -686,35 +686,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392648590}
   m_CullTransparentMesh: 1
---- !u!114 &392648595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392648590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1384295282}
-          m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-          m_MethodName: OnPointerDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &582034911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,9 +1566,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1360397729}
+  - component: {fileID: 1360397732}
   - component: {fileID: 1360397731}
   - component: {fileID: 1360397730}
-  - component: {fileID: 1360397732}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1677,6 +1648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aec5e1b28b784c7ba1b1645beb877db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedSlifer: {fileID: 1481707324}
 --- !u!1 &1373404138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2157,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360397732}
+        m_TargetAssemblyTypeName: SettingsPopup, Assembly-CSharp
+        m_MethodName: OnSpeedValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1584847062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2636,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1360397732}
         m_TargetAssemblyTypeName: SettingsPopup, Assembly-CSharp
         m_MethodName: OnSubmitName
-        m_Mode: 5
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
