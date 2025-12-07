@@ -1,1 +1,85 @@
-Library/
+############################
+# UNITY: ГЕНЕРИРУЕМЫЕ ПАПКИ
+############################
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+
+# Кэш аддресейблов и т.п. (пересобирается)
+Assets/StreamingAssets/aa/*
+AddressablesBuildData/
+ServerData/
+
+############################
+# ОС: МУСОР СИСТЕМЫ
+############################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux / прочее
+*~
+
+############################
+# IDE / РЕДАКТОРЫ
+############################
+# VS / VSCode
+.vscode/
+.vs/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+############################
+# GIT / ПАТЧИ / ВРЕМЕННОЕ
+############################
+*.orig
+*.rej
+*.patch
+*.diff
+
+############################
+# БИЛДЫ И АРХИВЫ
+############################
+*.apk
+*.aab
+*.ipa
+*.exe
+*.app
+*.app.dSYM/
+*.unitypackage
+*.zip
+*.tar
+*.tgz
+*.gz
+
+# AssetBundles / bundles
+AssetBundles/
+Bundles/
+*.manifest
+
+############################
+# ПРОЧЕЕ (ОПЦИОНАЛЬНО)
+############################
+# Логи, репорты
+CrashReports/
+PerfReports/
