@@ -7,27 +7,31 @@ using UnityEngine.InputSystem.HID;
 
 public class RayShooter : MonoBehaviour
 {
-    private Camera cam;
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip hitWallSound;
+    [SerializeField] private AudioClip hitEnemySound;
+    
+    private Camera _cam;
 
     private void Start()
     {
-        cam = GetComponent<Camera>();
+        _cam = GetComponent<Camera>();
     }
 
     private void OnGUI()
     {
         int size = 50;
-        float posX = cam.pixelWidth / 2 - size / 4;
-        float posY = cam.pixelHeight / 2 - size / 2;
+        float posX = _cam.pixelWidth / 2 - size / 4;
+        float posY = _cam.pixelHeight / 2 - size / 2;
         GUI.Label(new Rect(posX, posY, size, size), "+");
     }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            Vector3 point = new Vector3(cam.pixelWidth / 2, cam.pixelHeight / 2);
+            Vector3 point = new Vector3(_cam.pixelWidth / 2, _cam.pixelHeight / 2);
 
-            Ray ray = cam.ScreenPointToRay(point);
+            Ray ray = _cam.ScreenPointToRay(point);
 
             RaycastHit hit;
 
@@ -40,14 +44,17 @@ public class RayShooter : MonoBehaviour
                 {
                     target.ReactToHit();
                     Messenger.Broadcast(GameEvent.ENEMY_HIT);
+                    soundSource.PlayOneShot(hitEnemySound);
                 }else
                 {
                     StartCoroutine(SphereIndicator(hit.point));
+                    soundSource.PlayOneShot(hitWallSound);
                 }
                 
                 Debug.DrawLine(ray.origin, hit.point, Color.red, 999f);
             }
         }
+        
     }
 
     private IEnumerator SphereIndicator(Vector3 pos)
