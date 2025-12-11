@@ -20,11 +20,19 @@ public class RayShooter : MonoBehaviour
 
     private void OnGUI()
     {
-        int size = 50;
-        float posX = _cam.pixelWidth / 2 - size / 4;
-        float posY = _cam.pixelHeight / 2 - size / 2;
-        GUI.Label(new Rect(posX, posY, size, size), "+");
+        int size = 20;
+
+        float posX = (_cam.pixelWidth - size) / 2f;
+        float posY = (_cam.pixelHeight - size) / 2f;
+
+        var style = new GUIStyle(GUI.skin.label);
+        style.alignment = TextAnchor.MiddleCenter; 
+        style.fontSize = size;                    
+
+        GUI.Label(new Rect(posX, posY, size, size), "+", style);
     }
+
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
