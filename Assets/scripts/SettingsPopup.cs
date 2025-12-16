@@ -5,12 +5,18 @@ using UnityEngine.UI;
 public class SettingsPopup : MonoBehaviour
 {
     [SerializeField] private Slider speedSlifer;
+    
 
-    private void Start()
+    public void OnSoundMute()
     {
-        speedSlifer.value = PlayerPrefs.GetFloat("speed", 1);
+        Managers.Audio.SoundMute = !Managers.Audio.SoundMute;
     }
 
+    public void OnSoundValue(float value)
+    {
+        Managers.Audio.SoundValue = value;
+    }
+    
     public void Open()
     {
         gameObject.SetActive(true);
@@ -19,15 +25,5 @@ public class SettingsPopup : MonoBehaviour
     public void Close()
     {
         gameObject.SetActive(false);
-    }
-
-    public void OnSubmitName(string name)
-    {
-        Debug.Log(name);
-    }
-
-    public void OnSpeedValue(float speed)
-    {
-        Messenger<float>.Broadcast(GameEvent.SPEED_CHANGER, speed);
     }
 }

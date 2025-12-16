@@ -18,8 +18,6 @@ public class Managers : MonoBehaviour
 
         startSequence = new List<IGameManager>();
         startSequence.Add(Audio);
-        
-        
     }
 
     private IEnumerator StartupManagers()

@@ -30,7 +30,7 @@ public class MouseLook : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void ßUpdate()
     {
         if (axes == RotationAxes.MouseX)
         {
