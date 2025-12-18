@@ -4,8 +4,15 @@ public class AudioManager : MonoBehaviour, IGameManager
 {
     public ManagerStatus Status { get; private set; }
 
+    [SerializeField] private AudioSource soundSource;
+    
     private NetworkService _network;
 
+    public void PlaySound(AudioClip clip)
+    {
+        soundSource.PlayOneShot(clip);
+    }
+    
     public float SoundValue
     {
         get { return AudioListener.volume;}

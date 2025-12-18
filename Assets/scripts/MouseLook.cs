@@ -28,6 +28,8 @@ public class MouseLook : MonoBehaviour
         {
             rb.freezeRotation = true;
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()

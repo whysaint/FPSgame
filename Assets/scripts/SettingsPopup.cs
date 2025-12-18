@@ -4,9 +4,14 @@ using UnityEngine.UI;
 
 public class SettingsPopup : MonoBehaviour
 {
-    [SerializeField] private Slider speedSlifer;
-    
+    [SerializeField] private AudioClip sound;
 
+    public void OnSoundToggle()
+    {
+        Managers.Audio.SoundMute = !Managers.Audio.SoundMute;
+        Managers.Audio.PlaySound(sound);
+    }
+    
     public void OnSoundMute()
     {
         Managers.Audio.SoundMute = !Managers.Audio.SoundMute;
@@ -15,5 +20,10 @@ public class SettingsPopup : MonoBehaviour
     public void OnSoundValue(float value)
     {
         Managers.Audio.SoundValue = value;
+    }
+
+    public void OnClose()
+    {
+        gameObject.SetActive(false);
     }
 }
