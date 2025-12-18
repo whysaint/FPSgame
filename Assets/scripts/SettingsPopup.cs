@@ -16,14 +16,4 @@ public class SettingsPopup : MonoBehaviour
     {
         Managers.Audio.SoundValue = value;
     }
-    
-    public void Open()
-    {
-        gameObject.SetActive(true);
-    }
-    
-    public void Close()
-    {
-        gameObject.SetActive(false);
-    }
 }
