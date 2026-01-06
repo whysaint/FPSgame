@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.DualShock.LowLevel;
 
 public class MouseLook : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class MouseLook : MonoBehaviour
 
     public RotationAxes axes = RotationAxes.MouseYandX;
     
-    public float sensivityVert = 9.0f;
-    public float sensivityHor = 9.0f;
+    public float sensivityHor = 4.5f;
+    public float sensivityVert = 4.5f;
 
     public float minimumVert = -45f;
     public float maximumVert = 45f;
@@ -55,5 +56,11 @@ public class MouseLook : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(verticalRot, horizontalRot, 0f);
         }
+    }
+
+    public void EditSensivity(float sensivity)
+    {
+        sensivityHor = sensivity;
+        sensivityVert = sensivity;
     }
 }
